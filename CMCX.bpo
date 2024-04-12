@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="DATA_SUBJECTS" org.eventb.core.type="ℙ(DATA_SUBJECTS)"/>
+        <org.eventb.core.poIdentifier name="MODELS" org.eventb.core.type="ℙ(MODELS)"/>
+        <org.eventb.core.poIdentifier name="CONSENT_STATUSES" org.eventb.core.type="ℙ(CONSENT_STATUSES)"/>
+        <org.eventb.core.poIdentifier name="CONSENTS" org.eventb.core.type="ℙ(CONSENTS)"/>
+        <org.eventb.core.poIdentifier name="Withdrawn" org.eventb.core.type="CONSENT_STATUSES"/>
+        <org.eventb.core.poIdentifier name="Expired" org.eventb.core.type="CONSENT_STATUSES"/>
+        <org.eventb.core.poIdentifier name="Given" org.eventb.core.type="CONSENT_STATUSES"/>
+        <org.eventb.core.poIdentifier name="DataSubject1" org.eventb.core.type="DATA_SUBJECTS"/>
+        <org.eventb.core.poIdentifier name="DataSubject3" org.eventb.core.type="DATA_SUBJECTS"/>
+        <org.eventb.core.poIdentifier name="DataSubject2" org.eventb.core.type="DATA_SUBJECTS"/>
+        <org.eventb.core.poIdentifier name="ConsentB" org.eventb.core.type="CONSENTS"/>
+        <org.eventb.core.poIdentifier name="ConsentA" org.eventb.core.type="CONSENTS"/>
+        <org.eventb.core.poIdentifier name="Model1" org.eventb.core.type="MODELS"/>
+        <org.eventb.core.poIdentifier name="Model2" org.eventb.core.type="MODELS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/CMCX.bpo|org.eventb.core.poFile#CMCX|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(DATA_SUBJECTS,{DataSubject1},{DataSubject2},{DataSubject3})" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMCX.buc|org.eventb.core.contextFile#CMCX|org.eventb.core.axiom#,"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(CONSENTS,{ConsentA},{ConsentB})" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMCX.buc|org.eventb.core.contextFile#CMCX|org.eventb.core.axiom#."/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="partition(MODELS,{Model1},{Model2})" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMCX.buc|org.eventb.core.contextFile#CMCX|org.eventb.core.axiom#4"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="partition(CONSENT_STATUSES,{Given},{Withdrawn},{Expired})" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMCX.buc|org.eventb.core.contextFile#CMCX|org.eventb.core.axiom#8"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="(∅ ⦂ ℙ(MODELS×CONSENTS))∈MODELS ⤔ CONSENTS" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMCX.buc|org.eventb.core.contextFile#CMCX|org.eventb.core.axiom#9"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="(∅ ⦂ ℙ(MODELS×DATA_SUBJECTS×CONSENT_STATUSES))∈MODELS × DATA_SUBJECTS ⇸ CONSENT_STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMCX.buc|org.eventb.core.contextFile#CMCX|org.eventb.core.axiom#:"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

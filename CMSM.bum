@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="consents ≔ ∅" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="dataSubjectConsents ≔ ∅" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.seesContext name="(" org.eventb.core.target="CMCX"/>
+    <org.eventb.core.variable name="2" org.eventb.core.identifier="consents"/>
+    <org.eventb.core.invariant name="3" org.eventb.core.label="inv2" org.eventb.core.predicate="consents ∈ MODELS ⤔ CONSENTS"/>
+    <org.eventb.core.invariant name="+" org.eventb.core.label="inv3" org.eventb.core.predicate="dataSubjectConsents ∈ MODELS × DATA_SUBJECTS ⇸ CONSENT_STATUSES"/>
+    <org.eventb.core.variable name="," org.eventb.core.identifier="dataSubjectConsents"/>
+    <org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddConsent">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="model"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="consent"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="model ∈ MODELS ∧ model ∉ dom(consents)"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="consent ∈ CONSENTS ∧ consent ∉ ran(consents)"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="consents(model) ≔ consent" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddDataSubjectConsent">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="model"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="dataSubject"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="model ∈ dom(consents) ∧&#10;dataSubject ∈ DATA_SUBJECTS"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="model ↦ dataSubject ∉ dom(dataSubjectConsents)"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="dataSubjectConsents(model ↦ dataSubject) ≔ Given" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RevokeConsent">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="model"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="dataSubject"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="model ∈ dom(consents) ∧&#10;dataSubject ∈ dom(dataSubjectConsents ▷ {Given})[{model}]"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="dataSubjectConsents(model ↦ dataSubject) ≔ Withdrawn" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="," org.eventb.core.comment="Ensure the current status is explicitly &quot;Given&quot;" org.eventb.core.label="grd2" org.eventb.core.predicate="dataSubjectConsents(model ↦ dataSubject) = Given"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RenewConsent">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="model"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="dataSubject"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="model ∈ dom(consents) ∧&#10;dataSubject ∈ dom(dataSubjectConsents ▷ {Expired})[{model}]"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="dataSubjectConsents(model ↦ dataSubject) ≔ Given" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="dataSubjectConsents(model ↦ dataSubject) = Expired"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CheckConsentExpiry">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="model"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="dataSubject"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.identifier="consentExpired"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.identifier="status"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="model ↦ dataSubject ∈ dom(dataSubjectConsents) ∧&#10;dataSubjectConsents(model ↦ dataSubject) = Given"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="consentExpired ∈ BOOL ∧&#10;((consentExpired = TRUE ∧ status = Expired) ∨&#10;(consentExpired = FALSE ∧ status = Given))"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="dataSubjectConsents(model ↦ dataSubject) ≔ status" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>

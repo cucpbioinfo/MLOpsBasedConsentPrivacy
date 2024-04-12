@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+    <org.eventb.core.carrierSet name="'" org.eventb.core.identifier="DATA"/>
+    <org.eventb.core.carrierSet name="(" org.eventb.core.identifier="ARTIFACTS"/>
+    <org.eventb.core.carrierSet name=")" org.eventb.core.identifier="RELEASES"/>
+    <org.eventb.core.carrierSet name="*" org.eventb.core.identifier="STATUSES"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="+" org.eventb.core.identifier="Video"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="," org.eventb.core.identifier="Audio"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="-" org.eventb.core.identifier="Name"/>
+    <org.eventb.core.axiom name="." org.eventb.core.label="axm1" org.eventb.core.predicate="partition(DATA, {Video}, {Audio}, {Name})"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="/" org.eventb.core.identifier="Passed"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="0" org.eventb.core.identifier="Failed"/>
+    <org.eventb.core.axiom name="1" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(STATUSES, {Passed}, {Failed})"/>
+    <org.eventb.core.axiom name="2" org.eventb.core.label="axm3" org.eventb.core.predicate="∅ ∈ MODELS ⇸ ℙ(DATA_SUBJECTS × DATA)"/>
+    <org.eventb.core.axiom name="8" org.eventb.core.label="axm4" org.eventb.core.predicate="∅ ∈ ARTIFACTS ⇸ ℙ(DATA_SUBJECTS × DATA)"/>
+    <org.eventb.core.extendsContext name="3" org.eventb.core.target="CMCX"/>
+    <org.eventb.core.axiom name="4" org.eventb.core.label="axm5" org.eventb.core.predicate="{(Model1 ↦ 1), (Model2 ↦ 1)} ∈ MODELS ⇸ ℕ1"/>
+    <org.eventb.core.axiom name="5" org.eventb.core.label="axm6" org.eventb.core.predicate="∅ ∈ ARTIFACTS ⇸ STATUSES"/>
+    <org.eventb.core.axiom name="6" org.eventb.core.label="axm7" org.eventb.core.predicate="∅ ∈ ARTIFACTS ⇸ ℕ1"/>
+    <org.eventb.core.axiom name="7" org.eventb.core.label="axm8" org.eventb.core.predicate="∅ ∈ ARTIFACTS ⇸ MODELS"/>
+</org.eventb.core.contextFile>

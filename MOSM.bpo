@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="DATA_SUBJECTS" org.eventb.core.type="ℙ(DATA_SUBJECTS)"/>
+        <org.eventb.core.poIdentifier name="MODELS" org.eventb.core.type="ℙ(MODELS)"/>
+        <org.eventb.core.poIdentifier name="CONSENT_STATUSES" org.eventb.core.type="ℙ(CONSENT_STATUSES)"/>
+        <org.eventb.core.poIdentifier name="CONSENTS" org.eventb.core.type="ℙ(CONSENTS)"/>
+        <org.eventb.core.poIdentifier name="Withdrawn" org.eventb.core.type="CONSENT_STATUSES"/>
+        <org.eventb.core.poIdentifier name="Expired" org.eventb.core.type="CONSENT_STATUSES"/>
+        <org.eventb.core.poIdentifier name="Given" org.eventb.core.type="CONSENT_STATUSES"/>
+        <org.eventb.core.poIdentifier name="DataSubject1" org.eventb.core.type="DATA_SUBJECTS"/>
+        <org.eventb.core.poIdentifier name="DataSubject3" org.eventb.core.type="DATA_SUBJECTS"/>
+        <org.eventb.core.poIdentifier name="DataSubject2" org.eventb.core.type="DATA_SUBJECTS"/>
+        <org.eventb.core.poIdentifier name="ConsentB" org.eventb.core.type="CONSENTS"/>
+        <org.eventb.core.poIdentifier name="ConsentA" org.eventb.core.type="CONSENTS"/>
+        <org.eventb.core.poIdentifier name="Model1" org.eventb.core.type="MODELS"/>
+        <org.eventb.core.poIdentifier name="Model2" org.eventb.core.type="MODELS"/>
+        <org.eventb.core.poPredicate name="CONSENT_STATUSET" org.eventb.core.predicate="partition(DATA_SUBJECTS,{DataSubject1},{DataSubject2},{DataSubject3})" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMCX.buc|org.eventb.core.contextFile#CMCX|org.eventb.core.axiom#,"/>
+        <org.eventb.core.poPredicate name="CONSENT_STATUSEU" org.eventb.core.predicate="partition(CONSENTS,{ConsentA},{ConsentB})" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMCX.buc|org.eventb.core.contextFile#CMCX|org.eventb.core.axiom#."/>
+        <org.eventb.core.poPredicate name="CONSENT_STATUSEV" org.eventb.core.predicate="partition(MODELS,{Model1},{Model2})" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMCX.buc|org.eventb.core.contextFile#CMCX|org.eventb.core.axiom#4"/>
+        <org.eventb.core.poPredicate name="CONSENT_STATUSEW" org.eventb.core.predicate="partition(CONSENT_STATUSES,{Given},{Withdrawn},{Expired})" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMCX.buc|org.eventb.core.contextFile#CMCX|org.eventb.core.axiom#8"/>
+        <org.eventb.core.poPredicate name="CONSENT_STATUSEX" org.eventb.core.predicate="(∅ ⦂ ℙ(MODELS×CONSENTS))∈MODELS ⤔ CONSENTS" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMCX.buc|org.eventb.core.contextFile#CMCX|org.eventb.core.axiom#9"/>
+        <org.eventb.core.poPredicate name="CONSENT_STATUSEY" org.eventb.core.predicate="(∅ ⦂ ℙ(MODELS×DATA_SUBJECTS×CONSENT_STATUSES))∈MODELS × DATA_SUBJECTS ⇸ CONSENT_STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMCX.buc|org.eventb.core.contextFile#CMCX|org.eventb.core.axiom#:"/>
+        <org.eventb.core.poIdentifier name="ARTIFACTS" org.eventb.core.type="ℙ(ARTIFACTS)"/>
+        <org.eventb.core.poIdentifier name="RELEASES" org.eventb.core.type="ℙ(RELEASES)"/>
+        <org.eventb.core.poIdentifier name="STATUSES" org.eventb.core.type="ℙ(STATUSES)"/>
+        <org.eventb.core.poIdentifier name="DATA" org.eventb.core.type="ℙ(DATA)"/>
+        <org.eventb.core.poIdentifier name="Audio" org.eventb.core.type="DATA"/>
+        <org.eventb.core.poIdentifier name="Video" org.eventb.core.type="DATA"/>
+        <org.eventb.core.poIdentifier name="Passed" org.eventb.core.type="STATUSES"/>
+        <org.eventb.core.poIdentifier name="Failed" org.eventb.core.type="STATUSES"/>
+        <org.eventb.core.poIdentifier name="Name" org.eventb.core.type="DATA"/>
+        <org.eventb.core.poPredicate name="CONSENT_STATUSEZ" org.eventb.core.predicate="partition(DATA,{Video},{Audio},{Name})" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#."/>
+        <org.eventb.core.poPredicate name="CONSENT_STATUSE[" org.eventb.core.predicate="partition(STATUSES,{Passed},{Failed})" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#1"/>
+        <org.eventb.core.poPredicate name="CONSENT_STATUSE\" org.eventb.core.predicate="(∅ ⦂ ℙ(MODELS×ℙ(DATA_SUBJECTS×DATA)))∈MODELS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#2"/>
+        <org.eventb.core.poPredicate name="CONSENT_STATUSE]" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×ℙ(DATA_SUBJECTS×DATA)))∈ARTIFACTS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#8"/>
+        <org.eventb.core.poPredicate name="CONSENT_STATUSE^" org.eventb.core.predicate="{Model1 ↦ 1,Model2 ↦ 1}∈MODELS ⇸ ℕ1" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#4"/>
+        <org.eventb.core.poPredicate name="CONSENT_STATUSE_" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×STATUSES))∈ARTIFACTS ⇸ STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#5"/>
+        <org.eventb.core.poPredicate name="CONSENT_STATUSE`" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×ℤ))∈ARTIFACTS ⇸ ℕ1" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#6"/>
+        <org.eventb.core.poPredicate name="CONSENT_STATUSEa" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×MODELS))∈ARTIFACTS ⇸ MODELS" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#7"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="datasets" org.eventb.core.type="ℙ(MODELS×ℙ(DATA_SUBJECTS×DATA))"/>
+        <org.eventb.core.poIdentifier name="requiredData" org.eventb.core.type="ℙ(MODELS×DATA)"/>
+        <org.eventb.core.poIdentifier name="evaluateResults" org.eventb.core.type="ℙ(ARTIFACTS×STATUSES)"/>
+        <org.eventb.core.poIdentifier name="baselineScores" org.eventb.core.type="ℙ(MODELS×ℤ)"/>
+        <org.eventb.core.poIdentifier name="modelScores" org.eventb.core.type="ℙ(ARTIFACTS×ℤ)"/>
+        <org.eventb.core.poIdentifier name="testResults" org.eventb.core.type="ℙ(ARTIFACTS×STATUSES)"/>
+        <org.eventb.core.poIdentifier name="artifacts" org.eventb.core.type="ℙ(ARTIFACTS×MODELS)"/>
+        <org.eventb.core.poIdentifier name="trainingDatasets" org.eventb.core.type="ℙ(ARTIFACTS×ℙ(DATA_SUBJECTS×DATA))"/>
+        <org.eventb.core.poIdentifier name="consents" org.eventb.core.type="ℙ(MODELS×CONSENTS)"/>
+        <org.eventb.core.poIdentifier name="releases" org.eventb.core.type="ℙ(ARTIFACTS)"/>
+        <org.eventb.core.poIdentifier name="dataSubjectConsents" org.eventb.core.type="ℙ(MODELS×DATA_SUBJECTS×CONSENT_STATUSES)"/>
+        <org.eventb.core.poIdentifier name="dataSources" org.eventb.core.type="ℙ(DATA_SUBJECTS×DATA)"/>
+        <org.eventb.core.poPredicate name="dataSubjectConsentt" org.eventb.core.predicate="consents∈MODELS ⤔ CONSENTS" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.invariant#3"/>
+        <org.eventb.core.poPredicate name="dataSubjectConsentu" org.eventb.core.predicate="dataSubjectConsents∈MODELS × DATA_SUBJECTS ⇸ CONSENT_STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.invariant#+"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsentt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(MODELS×ℙ(DATA_SUBJECTS×DATA)))∈MODELS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsentt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×ℙ(DATA_SUBJECTS×DATA)))∈ARTIFACTS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsentt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×STATUSES))∈ARTIFACTS ⇸ STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsentt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{Model1 ↦ 2,Model2 ↦ 1}∈MODELS ⇸ ℕ1" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsentt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×ℤ))∈ARTIFACTS ⇸ ℕ1" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsentt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×STATUSES))∈ARTIFACTS ⇸ STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#INITIALISATION\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTdataSubjectConsentt" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="releases'" org.eventb.core.type="ℙ(ARTIFACTS)"/>
+        <org.eventb.core.poIdentifier name="modelScores'" org.eventb.core.type="ℙ(ARTIFACTS×ℤ)"/>
+        <org.eventb.core.poIdentifier name="testResults'" org.eventb.core.type="ℙ(ARTIFACTS×STATUSES)"/>
+        <org.eventb.core.poIdentifier name="requiredData'" org.eventb.core.type="ℙ(MODELS×DATA)"/>
+        <org.eventb.core.poIdentifier name="artifacts'" org.eventb.core.type="ℙ(ARTIFACTS×MODELS)"/>
+        <org.eventb.core.poIdentifier name="evaluateResults'" org.eventb.core.type="ℙ(ARTIFACTS×STATUSES)"/>
+        <org.eventb.core.poIdentifier name="datasets'" org.eventb.core.type="ℙ(MODELS×ℙ(DATA_SUBJECTS×DATA))"/>
+        <org.eventb.core.poIdentifier name="dataSubjectConsents'" org.eventb.core.type="ℙ(MODELS×DATA_SUBJECTS×CONSENT_STATUSES)"/>
+        <org.eventb.core.poIdentifier name="baselineScores'" org.eventb.core.type="ℙ(MODELS×ℤ)"/>
+        <org.eventb.core.poIdentifier name="dataSources'" org.eventb.core.type="ℙ(DATA_SUBJECTS×DATA)"/>
+        <org.eventb.core.poIdentifier name="trainingDatasets'" org.eventb.core.type="ℙ(ARTIFACTS×ℙ(DATA_SUBJECTS×DATA))"/>
+        <org.eventb.core.poIdentifier name="consents'" org.eventb.core.type="ℙ(MODELS×CONSENTS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdataSubjectConsentt" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTIDENTdataSubjectConsentt" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poPredicateSet name="EVTIDENTdataSubjectConsentu" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="model" org.eventb.core.type="MODELS"/>
+        <org.eventb.core.poIdentifier name="consent" org.eventb.core.type="CONSENTS"/>
+        <org.eventb.core.poIdentifier name="consents'" org.eventb.core.type="ℙ(MODELS×CONSENTS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdataSubjectConsentu" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTIDENTdataSubjectConsentu" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="model∈MODELS∧model∉dom(consents)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#-|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="consent∈CONSENTS∧consent∉ran(consents)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#-|org.eventb.core.guard#*"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTdataSubjectConsentv" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="model" org.eventb.core.type="MODELS"/>
+        <org.eventb.core.poIdentifier name="dataSubjectConsents'" org.eventb.core.type="ℙ(MODELS×DATA_SUBJECTS×CONSENT_STATUSES)"/>
+        <org.eventb.core.poIdentifier name="dataSubject" org.eventb.core.type="DATA_SUBJECTS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdataSubjectConsentv" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTIDENTdataSubjectConsentv" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="model∈dom(consents)∧dataSubject∈DATA_SUBJECTS" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#.|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="model ↦ dataSubject∉dom(dataSubjectConsents)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#.|org.eventb.core.guard#*"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTdataSubjectConsentw" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="model" org.eventb.core.type="MODELS"/>
+        <org.eventb.core.poIdentifier name="dataSubjectConsents'" org.eventb.core.type="ℙ(MODELS×DATA_SUBJECTS×CONSENT_STATUSES)"/>
+        <org.eventb.core.poIdentifier name="dataSubject" org.eventb.core.type="DATA_SUBJECTS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdataSubjectConsentw" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTIDENTdataSubjectConsentw" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="model∈dom(consents)∧dataSubject∈dom(dataSubjectConsents ▷ {Given})[{model}]" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#\/|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="dataSubjectConsents(model ↦ dataSubject)=Given" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#\/|org.eventb.core.guard#,"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTdataSubjectConsentx" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="model" org.eventb.core.type="MODELS"/>
+        <org.eventb.core.poIdentifier name="dataSubjectConsents'" org.eventb.core.type="ℙ(MODELS×DATA_SUBJECTS×CONSENT_STATUSES)"/>
+        <org.eventb.core.poIdentifier name="dataSubject" org.eventb.core.type="DATA_SUBJECTS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdataSubjectConsentx" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTIDENTdataSubjectConsentx" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="model∈dom(consents)∧dataSubject∈dom(dataSubjectConsents ▷ {Expired})[{model}]" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#0|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="dataSubjectConsents(model ↦ dataSubject)=Expired" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#0|org.eventb.core.guard#,"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTdataSubjectConsenty" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="model" org.eventb.core.type="MODELS"/>
+        <org.eventb.core.poIdentifier name="dataSubjectConsents'" org.eventb.core.type="ℙ(MODELS×DATA_SUBJECTS×CONSENT_STATUSES)"/>
+        <org.eventb.core.poIdentifier name="dataSubject" org.eventb.core.type="DATA_SUBJECTS"/>
+        <org.eventb.core.poIdentifier name="consentExpired" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="status" org.eventb.core.type="CONSENT_STATUSES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdataSubjectConsenty" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTIDENTdataSubjectConsenty" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="model ↦ dataSubject∈dom(dataSubjectConsents)∧dataSubjectConsents(model ↦ dataSubject)=Given" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#1|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="consentExpired∈BOOL∧((consentExpired=TRUE∧status=Expired)∨(consentExpired=FALSE∧status=Given))" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#1|org.eventb.core.guard#,"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="PrepareData/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsentz'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dataSubjects=dom(dataSubjectConsents ▷ {Given})[{model}]∧dataSubjects≠(∅ ⦂ ℙ(DATA_SUBJECTS))⇒(∀x⦂DATA_SUBJECTS·x∈dataSubjects∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents∈MODELS × DATA_SUBJECTS ⇸ CONSENT_STATUSES)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#C|org.eventb.core.guard#*"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#C|org.eventb.core.guard#*"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsentz'"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="PrepareData/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsentz"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="datasets{model ↦ dataSubjects × dataSources[dataSubjects]}∈MODELS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#C"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#PrepareData\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTdataSubjectConsentz" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="model" org.eventb.core.type="MODELS"/>
+        <org.eventb.core.poIdentifier name="datasets'" org.eventb.core.type="ℙ(MODELS×ℙ(DATA_SUBJECTS×DATA))"/>
+        <org.eventb.core.poIdentifier name="dataSubjects" org.eventb.core.type="ℙ(DATA_SUBJECTS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPdataSubjectConsentz'" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTIDENTdataSubjectConsentz" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="model∈dom(consents)∧model∉dom(datasets)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#C|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdataSubjectConsentz" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsentz'" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="dataSubjects=dom(dataSubjectConsents ▷ {Given})[{model}]∧dataSubjects≠(∅ ⦂ ℙ(DATA_SUBJECTS))∧(∀x⦂DATA_SUBJECTS·x∈dataSubjects∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents(model ↦ x)=Given)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#C|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀x⦂DATA,y⦂DATA_SUBJECTS·x∈requiredData[{model}]∧y∈dataSubjects⇒x∈dataSources[{y}]" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#C|org.eventb.core.guard#+"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="TrainModel/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent{'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="model∈dom(datasets)∧datasets∈MODELS ⇸ ℙ(DATA_SUBJECTS × DATA)∧(dataSubjects=dom(datasets(model))∧dataSubjects≠(∅ ⦂ ℙ(DATA_SUBJECTS))⇒(∀x⦂DATA_SUBJECTS·x∈dataSubjects∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents∈MODELS × DATA_SUBJECTS ⇸ CONSENT_STATUSES))" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#E|org.eventb.core.guard#+"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#E|org.eventb.core.guard#+"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent{'"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="TrainModel/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent{("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(artifact ↦ model∉artifacts∧artifact∉dom(trainingDatasets))∨(artifact∈dom(evaluateResults)⇒artifact∈dom(evaluateResults)∧evaluateResults∈ARTIFACTS ⇸ STATUSES)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#E|org.eventb.core.guard#,"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#E|org.eventb.core.guard#,"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent{("/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="TrainModel/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsent{"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="trainingDatasets{artifact ↦ datasets(model)}∈ARTIFACTS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#E"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#TrainModel\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="TrainModel/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsent{"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{artifact} ⩤ evaluateResults∈ARTIFACTS ⇸ STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#E"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#TrainModel\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="TrainModel/act3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsent{"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="model∈dom(datasets)∧datasets∈MODELS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#E|org.eventb.core.action#\/"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#E|org.eventb.core.action#\/"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsent{"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTdataSubjectConsent{" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="model" org.eventb.core.type="MODELS"/>
+        <org.eventb.core.poIdentifier name="artifact" org.eventb.core.type="ARTIFACTS"/>
+        <org.eventb.core.poIdentifier name="artifacts'" org.eventb.core.type="ℙ(ARTIFACTS×MODELS)"/>
+        <org.eventb.core.poIdentifier name="evaluateResults'" org.eventb.core.type="ℙ(ARTIFACTS×STATUSES)"/>
+        <org.eventb.core.poIdentifier name="dataSubjects" org.eventb.core.type="ℙ(DATA_SUBJECTS)"/>
+        <org.eventb.core.poIdentifier name="trainingDatasets'" org.eventb.core.type="ℙ(ARTIFACTS×ℙ(DATA_SUBJECTS×DATA))"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPdataSubjectConsent{'" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTIDENTdataSubjectConsent{" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="model∈dom(consents)∧model∈dom(datasets)∧artifact∈ARTIFACTS" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#E|org.eventb.core.guard#*"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPdataSubjectConsent{(" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent{'" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="dataSubjects=dom(datasets(model))∧dataSubjects≠(∅ ⦂ ℙ(DATA_SUBJECTS))∧(∀x⦂DATA_SUBJECTS·x∈dataSubjects∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents(model ↦ x)=Given)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#E|org.eventb.core.guard#+"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdataSubjectConsent{" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent{(" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="(artifact ↦ model∉artifacts∧artifact∉dom(trainingDatasets))∨(artifact∈dom(evaluateResults)∧evaluateResults(artifact)=Failed)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#E|org.eventb.core.guard#,"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="EvaluateModel/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent\|'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="artifact∈dom(trainingDatasets)∧trainingDatasets∈ARTIFACTS ⇸ ℙ(DATA_SUBJECTS × DATA)∧(dataSubjects=dom(trainingDatasets(artifact))∧dataSubjects≠(∅ ⦂ ℙ(DATA_SUBJECTS))⇒(∀x⦂DATA_SUBJECTS·x∈dataSubjects∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents∈MODELS × DATA_SUBJECTS ⇸ CONSENT_STATUSES))" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#F|org.eventb.core.guard#-"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#F|org.eventb.core.guard#-"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent\|'"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="EvaluateModel/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent\|)"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="modelScore∈ℕ⇒model∈dom(baselineScores)∧baselineScores∈MODELS ⇸ ℤ" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#F|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#F|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent\|)"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="EvaluateModel/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsent\|"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="evaluateResults{artifact ↦ status}∈ARTIFACTS ⇸ STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#F"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#EvaluateModel\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="EvaluateModel/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsent\|"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="modelScores{artifact ↦ modelScore}∈ARTIFACTS ⇸ ℕ1" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#F"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#EvaluateModel\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTdataSubjectConsent|" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="modelScores'" org.eventb.core.type="ℙ(ARTIFACTS×ℤ)"/>
+        <org.eventb.core.poIdentifier name="model" org.eventb.core.type="MODELS"/>
+        <org.eventb.core.poIdentifier name="artifact" org.eventb.core.type="ARTIFACTS"/>
+        <org.eventb.core.poIdentifier name="evaluateResults'" org.eventb.core.type="ℙ(ARTIFACTS×STATUSES)"/>
+        <org.eventb.core.poIdentifier name="dataSubjects" org.eventb.core.type="ℙ(DATA_SUBJECTS)"/>
+        <org.eventb.core.poIdentifier name="status" org.eventb.core.type="STATUSES"/>
+        <org.eventb.core.poIdentifier name="modelScore" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPdataSubjectConsent|'" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTIDENTdataSubjectConsent\|" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="model∈dom(consents)∧model∈dom(datasets)∧model∈dom(baselineScores)∧modelScore∈ℕ1∧artifact∈dom(trainingDatasets)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#F|org.eventb.core.guard#,"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPdataSubjectConsent|)" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent\|'" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="dataSubjects=dom(trainingDatasets(artifact))∧dataSubjects≠(∅ ⦂ ℙ(DATA_SUBJECTS))∧(∀x⦂DATA_SUBJECTS·x∈dataSubjects∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents(model ↦ x)=Given)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#F|org.eventb.core.guard#-"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="artifact ↦ model∈artifacts∧artifact∉dom(evaluateResults)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#F|org.eventb.core.guard#."/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdataSubjectConsent|" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent\|)" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="modelScore∈ℕ∧((modelScore≥baselineScores(model)⇒status=Passed)∧(modelScore&lt;baselineScores(model)⇒status=Failed))" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#F|org.eventb.core.guard#\/"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="TestApplication/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent}'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="artifact∈dom(trainingDatasets)∧trainingDatasets∈ARTIFACTS ⇸ ℙ(DATA_SUBJECTS × DATA)∧(dataSubjects=dom(trainingDatasets(artifact))∧dataSubjects≠(∅ ⦂ ℙ(DATA_SUBJECTS))⇒(∀x⦂DATA_SUBJECTS·x∈dataSubjects∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents∈MODELS × DATA_SUBJECTS ⇸ CONSENT_STATUSES))" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#G|org.eventb.core.guard#,"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#G|org.eventb.core.guard#,"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent}'"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="TestApplication/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent})"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="artifact∉dom(testResults)∨(artifact∈dom(testResults)⇒artifact∈dom(testResults)∧testResults∈ARTIFACTS ⇸ STATUSES)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#G|org.eventb.core.guard#0"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#G|org.eventb.core.guard#0"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent})"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="TestApplication/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsent}"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="testResults{artifact ↦ status}∈ARTIFACTS ⇸ STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#G"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#TestApplication\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTdataSubjectConsent}" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="testResults'" org.eventb.core.type="ℙ(ARTIFACTS×STATUSES)"/>
+        <org.eventb.core.poIdentifier name="model" org.eventb.core.type="MODELS"/>
+        <org.eventb.core.poIdentifier name="artifact" org.eventb.core.type="ARTIFACTS"/>
+        <org.eventb.core.poIdentifier name="dataSubjects" org.eventb.core.type="ℙ(DATA_SUBJECTS)"/>
+        <org.eventb.core.poIdentifier name="status" org.eventb.core.type="STATUSES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPdataSubjectConsent}'" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTIDENTdataSubjectConsent}" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="model∈dom(consents)∧model∈dom(datasets)∧artifact∈dom(trainingDatasets)∧status∈STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#G|org.eventb.core.guard#+"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPdataSubjectConsent})" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent}'" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="dataSubjects=dom(trainingDatasets(artifact))∧dataSubjects≠(∅ ⦂ ℙ(DATA_SUBJECTS))∧(∀x⦂DATA_SUBJECTS·x∈dataSubjects∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents(model ↦ x)=Given)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#G|org.eventb.core.guard#,"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="artifact ↦ Passed∈evaluateResults" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#G|org.eventb.core.guard#-"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdataSubjectConsent}" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent})" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="artifact∉dom(testResults)∨(artifact∈dom(testResults)∧testResults(artifact)=Failed)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#G|org.eventb.core.guard#0"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="DeployApplication/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent~'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="artifact∈dom(trainingDatasets)∧trainingDatasets∈ARTIFACTS ⇸ ℙ(DATA_SUBJECTS × DATA)∧(dataSubjects=dom(trainingDatasets(artifact))∧dataSubjects≠(∅ ⦂ ℙ(DATA_SUBJECTS))⇒(∀x⦂DATA_SUBJECTS·x∈dataSubjects∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents∈MODELS × DATA_SUBJECTS ⇸ CONSENT_STATUSES))" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#H|org.eventb.core.guard#,"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#H|org.eventb.core.guard#,"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent~'"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DeployApplication/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent~("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="artifact∈dom(testResults)⇒testResults∈ARTIFACTS ⇸ STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#H|org.eventb.core.guard#-"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#H|org.eventb.core.guard#-"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent~("/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTdataSubjectConsent~" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="releases'" org.eventb.core.type="ℙ(ARTIFACTS)"/>
+        <org.eventb.core.poIdentifier name="model" org.eventb.core.type="MODELS"/>
+        <org.eventb.core.poIdentifier name="artifact" org.eventb.core.type="ARTIFACTS"/>
+        <org.eventb.core.poIdentifier name="dataSubjects" org.eventb.core.type="ℙ(DATA_SUBJECTS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPdataSubjectConsent~'" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTIDENTdataSubjectConsent~" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="model∈dom(consents)∧model∈dom(datasets)∧artifact∈dom(trainingDatasets)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#H|org.eventb.core.guard#+"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPdataSubjectConsent~(" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent~'" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="dataSubjects=dom(trainingDatasets(artifact))∧dataSubjects≠(∅ ⦂ ℙ(DATA_SUBJECTS))∧(∀x⦂DATA_SUBJECTS·x∈dataSubjects∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents(model ↦ x)=Given)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#H|org.eventb.core.guard#,"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdataSubjectConsent~" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsent~(" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="artifact∈dom(testResults)∧testResults(artifact)=Passed" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#H|org.eventb.core.guard#-"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="artifact∉releases" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#H|org.eventb.core.guard#."/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="MonitorConsentViolation/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTIDENTdataSubjectConsenu'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀a⦂ARTIFACTS·a∈dom(artifacts)∧artifacts∈ARTIFACTS ⇸ MODELS∧a∈dom(trainingDatasets)⇒(∀ds⦂DATA_SUBJECTS·trainingDatasets∈ARTIFACTS ⇸ ℙ(DATA_SUBJECTS × DATA)∧(ds∈dom(trainingDatasets(a))∧artifacts(a) ↦ ds∈dom(dataSubjectConsents)⇒dataSubjectConsents∈MODELS × DATA_SUBJECTS ⇸ CONSENT_STATUSES))" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#I|org.eventb.core.guard#6"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#I|org.eventb.core.guard#6"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTIDENTdataSubjectConsenu'"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="MonitorConsentViolation/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsenu'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="selectedModels ⩤ datasets∈MODELS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#I"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#MonitorConsentViolation\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="MonitorConsentViolation/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsenu'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="selectedArtifacts ⩤ trainingDatasets∈ARTIFACTS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#I"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#MonitorConsentViolation\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="MonitorConsentViolation/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsenu'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="selectedArtifacts ⩤ evaluateResults∈ARTIFACTS ⇸ STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#I"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#MonitorConsentViolation\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="MonitorConsentViolation/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsenu'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="selectedArtifacts ⩤ modelScores∈ARTIFACTS ⇸ ℕ1" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#I"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#MonitorConsentViolation\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="MonitorConsentViolation/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsenu'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="selectedArtifacts ⩤ testResults∈ARTIFACTS ⇸ STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#I"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#MonitorConsentViolation\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTdataSubjectConsenu'" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="releases'" org.eventb.core.type="ℙ(ARTIFACTS)"/>
+        <org.eventb.core.poIdentifier name="modelScores'" org.eventb.core.type="ℙ(ARTIFACTS×ℤ)"/>
+        <org.eventb.core.poIdentifier name="testResults'" org.eventb.core.type="ℙ(ARTIFACTS×STATUSES)"/>
+        <org.eventb.core.poIdentifier name="artifacts'" org.eventb.core.type="ℙ(ARTIFACTS×MODELS)"/>
+        <org.eventb.core.poIdentifier name="evaluateResults'" org.eventb.core.type="ℙ(ARTIFACTS×STATUSES)"/>
+        <org.eventb.core.poIdentifier name="datasets'" org.eventb.core.type="ℙ(MODELS×ℙ(DATA_SUBJECTS×DATA))"/>
+        <org.eventb.core.poIdentifier name="trainingDatasets'" org.eventb.core.type="ℙ(ARTIFACTS×ℙ(DATA_SUBJECTS×DATA))"/>
+        <org.eventb.core.poIdentifier name="selectedArtifacts" org.eventb.core.type="ℙ(ARTIFACTS)"/>
+        <org.eventb.core.poIdentifier name="selectedModels" org.eventb.core.type="ℙ(MODELS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdataSubjectConsenu'" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTIDENTdataSubjectConsenu'" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="selectedArtifacts={a⦂ARTIFACTS·a∈dom(artifacts)∧artifacts∈ARTIFACTS ⇸ MODELS∧a∈dom(trainingDatasets)∧(∃ds⦂DATA_SUBJECTS·ds∈dom(trainingDatasets(a))∧artifacts(a) ↦ ds∈dom(dataSubjectConsents)∧dataSubjectConsents(artifacts(a) ↦ ds)≠Given) ∣ a}" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#I|org.eventb.core.guard#6"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="selectedModels={m⦂MODELS·∃a⦂ARTIFACTS·a∈selectedArtifacts∧a ↦ m∈artifacts ∣ m}" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#I|org.eventb.core.guard#9"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="selectedArtifacts≠(∅ ⦂ ℙ(ARTIFACTS))∧selectedModels≠(∅ ⦂ ℙ(MODELS))" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#I|org.eventb.core.guard#:"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="MonitorConsentAddition/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsenu('"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="model∈dom(datasets)∧datasets∈MODELS ⇸ ℙ(DATA_SUBJECTS × DATA)∧(dataSubjects=dom(datasets(model))∧dataSubjects≠(∅ ⦂ ℙ(DATA_SUBJECTS))⇒(∀x⦂DATA_SUBJECTS·x∈dataSubjects∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents∈MODELS × DATA_SUBJECTS ⇸ CONSENT_STATUSES))" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#K|org.eventb.core.guard#5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#K|org.eventb.core.guard#5"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsenu('"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="MonitorConsentAddition/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsenu("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{model} ⩤ datasets∈MODELS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#K"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#MonitorConsentAddition\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="MonitorConsentAddition/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsenu("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="selectedArtifacts ⩤ trainingDatasets∈ARTIFACTS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#K"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#MonitorConsentAddition\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="MonitorConsentAddition/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsenu("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="selectedArtifacts ⩤ evaluateResults∈ARTIFACTS ⇸ STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#K"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#MonitorConsentAddition\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="MonitorConsentAddition/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsenu("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="selectedArtifacts ⩤ modelScores∈ARTIFACTS ⇸ ℕ1" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#K"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#MonitorConsentAddition\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="MonitorConsentAddition/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsenu("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="selectedArtifacts ⩤ testResults∈ARTIFACTS ⇸ STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#K"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poSequent#MonitorConsentAddition\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTdataSubjectConsenu(" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="releases'" org.eventb.core.type="ℙ(ARTIFACTS)"/>
+        <org.eventb.core.poIdentifier name="modelScores'" org.eventb.core.type="ℙ(ARTIFACTS×ℤ)"/>
+        <org.eventb.core.poIdentifier name="testResults'" org.eventb.core.type="ℙ(ARTIFACTS×STATUSES)"/>
+        <org.eventb.core.poIdentifier name="model" org.eventb.core.type="MODELS"/>
+        <org.eventb.core.poIdentifier name="artifacts'" org.eventb.core.type="ℙ(ARTIFACTS×MODELS)"/>
+        <org.eventb.core.poIdentifier name="evaluateResults'" org.eventb.core.type="ℙ(ARTIFACTS×STATUSES)"/>
+        <org.eventb.core.poIdentifier name="datasets'" org.eventb.core.type="ℙ(MODELS×ℙ(DATA_SUBJECTS×DATA))"/>
+        <org.eventb.core.poIdentifier name="dataSubjects" org.eventb.core.type="ℙ(DATA_SUBJECTS)"/>
+        <org.eventb.core.poIdentifier name="trainingDatasets'" org.eventb.core.type="ℙ(ARTIFACTS×ℙ(DATA_SUBJECTS×DATA))"/>
+        <org.eventb.core.poIdentifier name="selectedArtifacts" org.eventb.core.type="ℙ(ARTIFACTS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPdataSubjectConsenu('" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTIDENTdataSubjectConsenu(" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="model∈dom(consents)∧model∈dom(datasets)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#K|org.eventb.core.guard#("/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdataSubjectConsenu(" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsenu('" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="dataSubjects=dom(datasets(model))∧dataSubjects≠(∅ ⦂ ℙ(DATA_SUBJECTS))∧(∀x⦂DATA_SUBJECTS·x∈dataSubjects∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents(model ↦ x)=Given)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#K|org.eventb.core.guard#5"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="dataSubjects⊂dom(dataSubjectConsents ▷ {Given})[{model}]" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#K|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="selectedArtifacts={a⦂ARTIFACTS·a∈dom(artifacts ▷ {model})∧a∈releases ∣ a}" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.event#K|org.eventb.core.guard#7"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOSM.bpo|org.eventb.core.poFile#MOSM|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="dataSources∈ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#2"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="requiredData∈ℙ(MODELS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#4"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="datasets∈MODELS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="artifacts∈ℙ(ARTIFACTS × MODELS)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#M"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="trainingDatasets∈ARTIFACTS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="evaluateResults∈ARTIFACTS ⇸ STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="baselineScores∈MODELS ⇸ ℕ1" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="modelScores∈ARTIFACTS ⇸ ℕ1" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="testResults∈ARTIFACTS ⇸ STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="releases∈ℙ(ARTIFACTS)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOSM.bum|org.eventb.core.machineFile#MOSM|org.eventb.core.invariant#;"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
