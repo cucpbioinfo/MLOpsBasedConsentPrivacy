@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
     <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
-        <org.eventb.core.action name="'" org.eventb.core.assignment="dataSources ≔ {(DataSubject1 ↦ Video), (DataSubject2 ↦ Video), (DataSubject3 ↦ Video)}" org.eventb.core.label="act3"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="requiredData ≔ {(Model1 ↦ Video), (Model2 ↦ Audio)}" org.eventb.core.label="act4"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="datasets ≔ ∅" org.eventb.core.label="act5"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="artifacts ≔ ∅" org.eventb.core.label="act6"/>
-        <org.eventb.core.action name="0" org.eventb.core.assignment="trainingDatasets ≔ ∅" org.eventb.core.label="act7"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="baselineScores ≔ {(Model1 ↦ 2), (Model2 ↦ 1)}" org.eventb.core.label="act8"/>
-        <org.eventb.core.action name="," org.eventb.core.assignment="modelScores ≔ ∅" org.eventb.core.label="act9"/>
-        <org.eventb.core.action name="/" org.eventb.core.assignment="evaluateResults ≔ ∅" org.eventb.core.label="act10"/>
-        <org.eventb.core.action name="-" org.eventb.core.assignment="testResults ≔ ∅" org.eventb.core.label="act11"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="releases ≔ ∅" org.eventb.core.label="act12"/>
+        <org.eventb.core.action name="'" org.eventb.core.assignment="dataSources ≔ {(DataSubject1 ↦ Video), (DataSubject2 ↦ Video), (DataSubject3 ↦ Video)}" org.eventb.core.label="act5"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="requiredData ≔ {(Model1 ↦ Video), (Model2 ↦ Audio)}" org.eventb.core.label="act6"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="datasets ≔ ∅" org.eventb.core.label="act7"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="artifacts ≔ ∅" org.eventb.core.label="act8"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="trainingDatasets ≔ ∅" org.eventb.core.label="act9"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="baselineScores ≔ {(Model1 ↦ 2), (Model2 ↦ 1)}" org.eventb.core.label="act10"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="modelScores ≔ ∅" org.eventb.core.label="act11"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="evaluateResults ≔ ∅" org.eventb.core.label="act12"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="testResults ≔ ∅" org.eventb.core.label="act13"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="releases ≔ ∅" org.eventb.core.label="act14"/>
     </org.eventb.core.event>
     <org.eventb.core.refinesMachine name="(" org.eventb.core.target="CMSM"/>
-    <org.eventb.core.variable name=")" org.eventb.core.identifier="consents"/>
+    <org.eventb.core.variable name=")" org.eventb.core.identifier="consentDetails"/>
+    <org.eventb.core.variable name="N" org.eventb.core.identifier="consents"/>
     <org.eventb.core.variable name="&gt;" org.eventb.core.identifier="dataSubjectConsents"/>
+    <org.eventb.core.variable name="O" org.eventb.core.identifier="dataRetentions"/>
     <org.eventb.core.variable name="=" org.eventb.core.identifier="dataSources"/>
     <org.eventb.core.variable name="*" org.eventb.core.identifier="requiredData"/>
     <org.eventb.core.variable name="+" org.eventb.core.identifier="datasets"/>
