@@ -21,24 +21,28 @@
         <org.eventb.core.poPredicate name="CONSENT_STATUSEW" org.eventb.core.predicate="partition(CONSENT_STATUSES,{Given},{Withdrawn},{Expired})" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMCX.buc|org.eventb.core.contextFile#CMCX|org.eventb.core.axiom#8"/>
         <org.eventb.core.poPredicate name="CONSENT_STATUSEX" org.eventb.core.predicate="(∅ ⦂ ℙ(MODELS×CONSENTS))∈MODELS ⤔ CONSENTS" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMCX.buc|org.eventb.core.contextFile#CMCX|org.eventb.core.axiom#9"/>
         <org.eventb.core.poPredicate name="CONSENT_STATUSEY" org.eventb.core.predicate="(∅ ⦂ ℙ(MODELS×DATA_SUBJECTS×CONSENT_STATUSES))∈MODELS × DATA_SUBJECTS ⇸ CONSENT_STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMCX.buc|org.eventb.core.contextFile#CMCX|org.eventb.core.axiom#:"/>
+        <org.eventb.core.poIdentifier name="DEPLOYMENT_STATUSES" org.eventb.core.type="ℙ(DEPLOYMENT_STATUSES)"/>
         <org.eventb.core.poIdentifier name="ARTIFACTS" org.eventb.core.type="ℙ(ARTIFACTS)"/>
-        <org.eventb.core.poIdentifier name="RELEASES" org.eventb.core.type="ℙ(RELEASES)"/>
         <org.eventb.core.poIdentifier name="STATUSES" org.eventb.core.type="ℙ(STATUSES)"/>
+        <org.eventb.core.poIdentifier name="PARAMETERS" org.eventb.core.type="ℙ(PARAMETERS)"/>
         <org.eventb.core.poIdentifier name="DATA" org.eventb.core.type="ℙ(DATA)"/>
+        <org.eventb.core.poIdentifier name="Deployed" org.eventb.core.type="DEPLOYMENT_STATUSES"/>
         <org.eventb.core.poIdentifier name="Audio" org.eventb.core.type="DATA"/>
         <org.eventb.core.poIdentifier name="Video" org.eventb.core.type="DATA"/>
         <org.eventb.core.poIdentifier name="Passed" org.eventb.core.type="STATUSES"/>
         <org.eventb.core.poIdentifier name="Failed" org.eventb.core.type="STATUSES"/>
+        <org.eventb.core.poIdentifier name="Void" org.eventb.core.type="DEPLOYMENT_STATUSES"/>
         <org.eventb.core.poIdentifier name="Name" org.eventb.core.type="DATA"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/MOCX.bpo|org.eventb.core.poFile#MOCX|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(DATA,{Video},{Audio},{Name})" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#."/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(STATUSES,{Passed},{Failed})" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#1"/>
-        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="(∅ ⦂ ℙ(MODELS×ℙ(DATA_SUBJECTS×DATA)))∈MODELS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#2"/>
-        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×ℙ(DATA_SUBJECTS×DATA)))∈ARTIFACTS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#8"/>
-        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="{Model1 ↦ 1,Model2 ↦ 1}∈MODELS ⇸ ℕ1" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#4"/>
-        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×STATUSES))∈ARTIFACTS ⇸ STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#5"/>
-        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×ℤ))∈ARTIFACTS ⇸ ℕ1" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#6"/>
-        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×MODELS))∈ARTIFACTS ⇸ MODELS" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#7"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="partition(DEPLOYMENT_STATUSES,{Void},{Deployed})" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#&gt;"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="(∅ ⦂ ℙ(MODELS×ℙ(DATA_SUBJECTS×DATA)))∈MODELS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#2"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×ℙ(DATA_SUBJECTS×DATA)))∈ARTIFACTS ⇸ ℙ(DATA_SUBJECTS × DATA)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#8"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="{Model1 ↦ 1,Model2 ↦ 1}∈MODELS ⇸ ℕ1" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#4"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×STATUSES))∈ARTIFACTS ⇸ STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#5"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×ℤ))∈ARTIFACTS ⇸ ℕ1" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#6"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×MODELS))∈ARTIFACTS ⇸ MODELS" org.eventb.core.source="/MLOpsBasedConsentPrivacy/MOCX.buc|org.eventb.core.contextFile#MOCX|org.eventb.core.axiom#7"/>
     </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
