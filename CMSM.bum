@@ -47,7 +47,7 @@
         <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="model ∈ dom(consents) ∧&#10;consent ∈ dom(consentDetails) ∩ dom(consents[{model}])"/>
         <org.eventb.core.guard name="0" org.eventb.core.label="grd2" org.eventb.core.predicate="dataSubject ∈ dom(dataSubjectConsents ▷ {Expired})[{model}] ∧&#10;dataSubjectConsents(model ↦ dataSubject) = Expired"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="dataSubjectConsents(model ↦ dataSubject) ≔ Given" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="model ↦ dataSubject ∈ dom(dataRetentions) ∧&#10;currentTimestamp ∈ 1709089080000‥1716865080000"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="model ↦ dataSubject ∈ dom(dataRetentions) ∧&#10;currentTimestamp ∈ 1709089080000‥1709089080002"/>
         <org.eventb.core.action name="-" org.eventb.core.assignment="dataRetentions(model ↦ dataSubject) ≔ currentTimestamp + &#10;(consentDetails(consent) ∗ 86400000)" org.eventb.core.label="act2"/>
         <org.eventb.core.parameter name="." org.eventb.core.identifier="currentTimestamp"/>
         <org.eventb.core.guard name="1" org.eventb.core.label="grd4" org.eventb.core.predicate="dataRetentions  {model ↦ dataSubject ↦ currentTimestamp + &#10;(consentDetails(consent) ∗ 86400000)} ∈ &#10;MODELS × DATA_SUBJECTS ⇸ ℕ1"/>
@@ -59,11 +59,10 @@
         <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="consent ∈ dom(consentDetails) ∩ dom(consents[{model}])"/>
         <org.eventb.core.guard name="9" org.eventb.core.label="grd2" org.eventb.core.predicate="model ↦ dataSubject ∈ dom(dataSubjectConsents) ∩ dom(dataRetentions) ∧ &#10;dataSubjectConsents(model ↦ dataSubject) = Given"/>
         <org.eventb.core.guard name="2" org.eventb.core.label="grd3" org.eventb.core.predicate="currentTimestamp ∈ 1712984876000‥1716865080000 ∧&#10;expiredTimestamp = dataRetentions(model ↦ dataSubject)"/>
-        <org.eventb.core.guard name="6" org.eventb.core.label="grd4" org.eventb.core.predicate="(expiredTimestamp &lt; currentTimestamp ⇒ status = Expired) ∧ &#10;(expiredTimestamp ≥ currentTimestamp ⇒ status = Given)"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="dataSubjectConsents(model ↦ dataSubject) ≔ status" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="6" org.eventb.core.label="grd4" org.eventb.core.predicate="expiredTimestamp &lt; currentTimestamp"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="dataSubjectConsents(model ↦ dataSubject) ≔ Expired" org.eventb.core.label="act1"/>
         <org.eventb.core.parameter name="0" org.eventb.core.identifier="currentTimestamp"/>
         <org.eventb.core.parameter name="4" org.eventb.core.identifier="expiredTimestamp"/>
-        <org.eventb.core.parameter name="8" org.eventb.core.identifier="status"/>
     </org.eventb.core.event>
     <org.eventb.core.invariant name="5" org.eventb.core.label="inv4" org.eventb.core.predicate="dataRetentions ∈ MODELS × DATA_SUBJECTS ⇸ ℕ1"/>
     <org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CheckActiveConsentAvailability">

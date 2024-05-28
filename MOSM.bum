@@ -36,8 +36,8 @@
     <org.eventb.core.invariant name="M" org.eventb.core.label="inv4" org.eventb.core.predicate="artifacts ∈ ℙ(ARTIFACTS × MODELS)"/>
     <org.eventb.core.invariant name="R" org.eventb.core.label="inv5" org.eventb.core.predicate="modelParameters ∈ ARTIFACTS ⇸ ℙ(PARAMETERS) "/>
     <org.eventb.core.invariant name="6" org.eventb.core.label="inv6" org.eventb.core.predicate="trainingDatasets ∈ ARTIFACTS ⇸ ℙ(DATA_SUBJECTS × DATA)"/>
-    <org.eventb.core.invariant name="7" org.eventb.core.label="inv7" org.eventb.core.predicate="evaluateResults ∈ ARTIFACTS ⇸ STATUSES"/>
-    <org.eventb.core.invariant name="8" org.eventb.core.label="inv8" org.eventb.core.predicate="baselineScores ∈ MODELS ⇸ ℕ1"/>
+    <org.eventb.core.invariant name="7" org.eventb.core.label="inv7" org.eventb.core.predicate="baselineScores ∈ MODELS ⇸ ℕ1"/>
+    <org.eventb.core.invariant name="8" org.eventb.core.label="inv8" org.eventb.core.predicate="evaluateResults ∈ ARTIFACTS ⇸ STATUSES"/>
     <org.eventb.core.invariant name="9" org.eventb.core.label="inv9" org.eventb.core.predicate="modelScores ∈ ARTIFACTS ⇸ ℕ1"/>
     <org.eventb.core.invariant name=":" org.eventb.core.label="inv10" org.eventb.core.predicate="testResults ∈ ARTIFACTS ⇸ STATUSES"/>
     <org.eventb.core.invariant name=";" org.eventb.core.label="inv11" org.eventb.core.predicate="releases ∈ ARTIFACTS ⇸ DEPLOYMENT_STATUSES"/>
@@ -118,7 +118,7 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="MonitorConsentViolation">
         <org.eventb.core.action name="+" org.eventb.core.assignment="datasets ≔ selectedModels ⩤ datasets" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="4" org.eventb.core.assignment="artifacts ≔ artifacts ⩥ selectedModels" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="4" org.eventb.core.assignment="artifacts ≔ selectedArtifacts ⩤ artifacts" org.eventb.core.label="act2"/>
         <org.eventb.core.action name=";" org.eventb.core.assignment="modelParameters ≔ selectedArtifacts ⩤ modelParameters" org.eventb.core.label="act3"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="trainingDatasets ≔ selectedArtifacts ⩤ trainingDatasets" org.eventb.core.label="act4"/>
         <org.eventb.core.parameter name="-" org.eventb.core.identifier="selectedArtifacts"/>
@@ -136,13 +136,13 @@
         <org.eventb.core.parameter name="6" org.eventb.core.identifier="dataSubjects"/>
         <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="model ∈ dom(consents) ∧&#10;model ∈ dom(datasets)"/>
         <org.eventb.core.guard name="5" org.eventb.core.label="grd2" org.eventb.core.predicate="dataSubjects = dom(datasets(model)) ∧&#10;dataSubjects ≠ ∅ ∧&#10;(∀x·x ∈ dataSubjects ∧&#10;model ↦ x ∈ dom(dataSubjectConsents) ⇒&#10;dataSubjectConsents(model ↦ x) = Given)"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="dataSubjects ⊆ dom(dataSubjectConsents ▷ {Given})[{model}]"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="dataSubjects ⊂ dom(dataSubjectConsents ▷ {Given})[{model}]"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="datasets ≔ {model} ⩤ datasets" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="-" org.eventb.core.assignment="artifacts ≔ artifacts ⩥ {model}" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="artifacts ≔ selectedArtifacts ⩤ artifacts" org.eventb.core.label="act2"/>
         <org.eventb.core.action name="8" org.eventb.core.assignment="modelParameters ≔ selectedArtifacts ⩤ modelParameters" org.eventb.core.label="act3"/>
         <org.eventb.core.action name="4" org.eventb.core.assignment="trainingDatasets ≔ selectedArtifacts ⩤ trainingDatasets" org.eventb.core.label="act4"/>
         <org.eventb.core.action name="." org.eventb.core.assignment="modelScores ≔ selectedArtifacts ⩤ modelScores" org.eventb.core.label="act5"/>
-        <org.eventb.core.guard name="7" org.eventb.core.label="grd4" org.eventb.core.predicate="selectedArtifacts = {a ∣ a ∈ dom(artifacts ▷ {model}) ∩ dom(releases ▷ {Deployed})}"/>
+        <org.eventb.core.guard name="7" org.eventb.core.label="grd4" org.eventb.core.predicate="selectedArtifacts = {a ∣ a ∈ dom(artifacts ▷ {model})}"/>
         <org.eventb.core.parameter name="0" org.eventb.core.identifier="selectedArtifacts"/>
         <org.eventb.core.action name="1" org.eventb.core.assignment="evaluateResults ≔ selectedArtifacts ⩤ evaluateResults" org.eventb.core.label="act6"/>
         <org.eventb.core.action name="2" org.eventb.core.assignment="testResults ≔ selectedArtifacts ⩤ testResults" org.eventb.core.label="act7"/>

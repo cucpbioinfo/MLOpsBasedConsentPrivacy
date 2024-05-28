@@ -206,7 +206,7 @@
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTHYPdataSubjectConsentx)" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/CMSM.bpo|org.eventb.core.poFile#CMSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsentx'" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="dataSubject∈dom(dataSubjectConsents ▷ {Expired})[{model}]∧dataSubjectConsents(model ↦ dataSubject)=Expired" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#0|org.eventb.core.guard#0"/>
-        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="model ↦ dataSubject∈dom(dataRetentions)∧currentTimestamp∈1709089080000 ‥ 1716865080000" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#0|org.eventb.core.guard#,"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="model ↦ dataSubject∈dom(dataRetentions)∧currentTimestamp∈1709089080000 ‥ 1709089080002" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#0|org.eventb.core.guard#,"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTALLHYPdataSubjectConsentx" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/CMSM.bpo|org.eventb.core.poFile#CMSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsentx)" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="dataRetentions{model ↦ dataSubject ↦ currentTimestamp+consentDetails(consent)∗86400000}∈MODELS × DATA_SUBJECTS ⇸ ℕ1" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#0|org.eventb.core.guard#1"/>
@@ -225,7 +225,7 @@
     </org.eventb.core.poSequent>
     <org.eventb.core.poSequent name="CheckConsentExpiry/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/CMSM.bpo|org.eventb.core.poFile#CMSM|org.eventb.core.poPredicateSet#EVTALLHYPdataSubjectConsenty"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dataSubjectConsents{model ↦ dataSubject ↦ status}∈MODELS × DATA_SUBJECTS ⇸ CONSENT_STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.invariant#+"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dataSubjectConsents{model ↦ dataSubject ↦ Expired}∈MODELS × DATA_SUBJECTS ⇸ CONSENT_STATUSES" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.invariant#+"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#1"/>
         <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.invariant#+"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MLOpsBasedConsentPrivacy/CMSM.bpo|org.eventb.core.poFile#CMSM|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MLOpsBasedConsentPrivacy/CMSM.bpo|org.eventb.core.poFile#CMSM|org.eventb.core.poSequent#CheckConsentExpiry\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
@@ -237,7 +237,6 @@
         <org.eventb.core.poIdentifier name="consent" org.eventb.core.type="CONSENTS"/>
         <org.eventb.core.poIdentifier name="dataSubjectConsents'" org.eventb.core.type="ℙ(MODELS×DATA_SUBJECTS×CONSENT_STATUSES)"/>
         <org.eventb.core.poIdentifier name="dataSubject" org.eventb.core.type="DATA_SUBJECTS"/>
-        <org.eventb.core.poIdentifier name="status" org.eventb.core.type="CONSENT_STATUSES"/>
         <org.eventb.core.poIdentifier name="currentTimestamp" org.eventb.core.type="ℤ"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTHYPdataSubjectConsenty'" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/CMSM.bpo|org.eventb.core.poFile#CMSM|org.eventb.core.poPredicateSet#EVTIDENTdataSubjectConsenty" org.eventb.core.poStamp="0">
@@ -248,7 +247,7 @@
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTALLHYPdataSubjectConsenty" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/CMSM.bpo|org.eventb.core.poFile#CMSM|org.eventb.core.poPredicateSet#EVTHYPdataSubjectConsenty(" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="currentTimestamp∈1712984876000 ‥ 1716865080000∧expiredTimestamp=dataRetentions(model ↦ dataSubject)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#1|org.eventb.core.guard#2"/>
-        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="(expiredTimestamp&lt;currentTimestamp⇒status=Expired)∧(expiredTimestamp≥currentTimestamp⇒status=Given)" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#1|org.eventb.core.guard#6"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="expiredTimestamp&lt;currentTimestamp" org.eventb.core.source="/MLOpsBasedConsentPrivacy/CMSM.bum|org.eventb.core.machineFile#CMSM|org.eventb.core.event#1|org.eventb.core.guard#6"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poSequent name="CheckActiveConsentAvailability/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MLOpsBasedConsentPrivacy/CMSM.bpo|org.eventb.core.poFile#CMSM|org.eventb.core.poPredicateSet#ALLHYP"/>
