@@ -14193,72 +14193,57 @@
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r5" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="DeployApplication/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31" org.eventb.core.prSets="ARTIFACTS,CONSENTS,CONSENT_STATUSES,DATA,DATA_SUBJECTS,DEPLOYMENT_STATUSES,MODELS,PARAMETERS,STATUSES">
+    <org.eventb.core.prProof name="DeployApplication/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12" org.eventb.core.prSets="ARTIFACTS,CONSENTS,CONSENT_STATUSES,DATA,DATA_SUBJECTS,DEPLOYMENT_STATUSES,MODELS,STATUSES">
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DATA_SUBJECTS,{DataSubject1},{DataSubject2},{DataSubject3}))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p32,p33,p34,p35"/>
-                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p32,p33,p34,p35"/>
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13,p14,p15,p16"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p13,p14,p15,p16"/>
                 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CONSENTS,{ConsentA},{ConsentB}))" org.eventb.core.prHyps="">
                     <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p28" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36,p37"/>
-                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p36,p37"/>
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17,p18"/>
+                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p17,p18"/>
                         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(MODELS,{Model1},{Model2}))" org.eventb.core.prHyps="">
                             <org.eventb.core.prAnte name="'">
-                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p38,p39"/>
-                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p38,p39"/>
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19,p20"/>
+                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p19,p20"/>
                                 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CONSENT_STATUSES,{Given},{Withdrawn},{Expired}))" org.eventb.core.prHyps="">
                                     <org.eventb.core.prAnte name="'">
-                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p27" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p40,p41,p42,p43"/>
-                                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p40,p41,p42,p43"/>
+                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21,p22,p23,p24"/>
+                                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p21,p22,p23,p24"/>
                                         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DATA,{Video},{Audio},{Name}))" org.eventb.core.prHyps="">
                                             <org.eventb.core.prAnte name="'">
-                                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p44,p45,p46,p47"/>
-                                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p44,p45,p46,p47"/>
+                                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p25,p26,p27,p28"/>
+                                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p25,p26,p27,p28"/>
                                                 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUSES,{Passed},{Failed}))" org.eventb.core.prHyps="">
                                                     <org.eventb.core.prAnte name="'">
-                                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p48,p49"/>
-                                                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p48,p49"/>
+                                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p29,p30"/>
+                                                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p29,p30"/>
                                                         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DEPLOYMENT_STATUSES,{Void},{Deployed}))" org.eventb.core.prHyps="">
                                                             <org.eventb.core.prAnte name="'">
-                                                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p50,p51"/>
-                                                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p50,p51"/>
-                                                                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+                                                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p31,p32"/>
+                                                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p31,p32"/>
+                                                                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
                                                                     <org.eventb.core.prAnte name="'">
-                                                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p52" org.eventb.core.prHyps="p21" org.eventb.core.prInfHyps="p53"/>
-                                                                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+                                                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p33,p34"/>
+                                                                        <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35,p36,p37"/>
+                                                                        <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p38"/>
+                                                                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                                                                             <org.eventb.core.prAnte name="'">
-                                                                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p29" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p54,p55"/>
-                                                                                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p56,p57,p58"/>
-                                                                                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p25" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p59,p60"/>
-                                                                                <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p61"/>
-                                                                                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p53"/>
-                                                                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                                                                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p39"/>
+                                                                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p40"/>
+                                                                                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p41"/>
+                                                                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with dataSubjects=dom(trainingDatasets(artifact))" org.eventb.core.prHyps="p35">
                                                                                     <org.eventb.core.prAnte name="'">
-                                                                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p62"/>
-                                                                                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p63"/>
-                                                                                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p64"/>
-                                                                                        <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with dataSubjects=dom(trainingDatasets(artifact))" org.eventb.core.prHyps="p56">
+                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p36" org.eventb.core.prInfHyps="p42"/>
+                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p37" org.eventb.core.prInfHyps="p43"/>
+                                                                                        <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p36,p37"/>
+                                                                                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p35"/>
+                                                                                        <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
                                                                                             <org.eventb.core.prAnte name="'">
-                                                                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p57" org.eventb.core.prInfHyps="p65"/>
-                                                                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p58" org.eventb.core.prInfHyps="p66"/>
-                                                                                                <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p57,p58"/>
-                                                                                                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p56"/>
-                                                                                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-                                                                                                    <org.eventb.core.prAnte name="'">
-                                                                                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p65" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p67"/>
-                                                                                                        <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with testResults(artifact)=Passed" org.eventb.core.prHyps="p60">
-                                                                                                            <org.eventb.core.prAnte name="'">
-                                                                                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p48" org.eventb.core.prInfHyps="p68"/>
-                                                                                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p49" org.eventb.core.prInfHyps="p69"/>
-                                                                                                                <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p48,p49"/>
-                                                                                                                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p60"/>
-                                                                                                                <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p17,p12,p16,p15,p19,p6,p24,p2,p31,p5,p3,p23,p7,p10,p13,p26,p30,p4,p21,p22,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49,p50,p51,p54,p55,p57,p58,p59,p61,p66,p67,p68,p69">
-                                                                                                                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
-                                                                                                                </org.eventb.core.prRule>
-                                                                                                            </org.eventb.core.prAnte>
-                                                                                                        </org.eventb.core.prRule>
-                                                                                                    </org.eventb.core.prAnte>
+                                                                                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p42" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p44"/>
+                                                                                                <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p8,p9,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p38,p43,p44">
+                                                                                                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
                                                                                                 </org.eventb.core.prRule>
                                                                                             </org.eventb.core.prAnte>
                                                                                         </org.eventb.core.prRule>
@@ -14307,103 +14292,69 @@
         <org.eventb.core.prIdent name="Void" org.eventb.core.type="DEPLOYMENT_STATUSES"/>
         <org.eventb.core.prIdent name="Withdrawn" org.eventb.core.type="CONSENT_STATUSES"/>
         <org.eventb.core.prIdent name="artifact" org.eventb.core.type="ARTIFACTS"/>
-        <org.eventb.core.prIdent name="baselineScores" org.eventb.core.type="ℙ(MODELS×ℤ)"/>
-        <org.eventb.core.prIdent name="consentDetails" org.eventb.core.type="ℙ(CONSENTS×ℤ)"/>
         <org.eventb.core.prIdent name="consents" org.eventb.core.type="ℙ(MODELS×(CONSENTS×ℤ))"/>
-        <org.eventb.core.prIdent name="dataRetentions" org.eventb.core.type="ℙ(MODELS×DATA_SUBJECTS×ℤ)"/>
         <org.eventb.core.prIdent name="dataSubjectConsents" org.eventb.core.type="ℙ(MODELS×DATA_SUBJECTS×CONSENT_STATUSES)"/>
         <org.eventb.core.prIdent name="dataSubjects" org.eventb.core.type="ℙ(DATA_SUBJECTS)"/>
-        <org.eventb.core.prIdent name="datasets" org.eventb.core.type="ℙ(MODELS×ℙ(DATA_SUBJECTS×DATA))"/>
-        <org.eventb.core.prIdent name="evaluateResults" org.eventb.core.type="ℙ(ARTIFACTS×STATUSES)"/>
         <org.eventb.core.prIdent name="model" org.eventb.core.type="MODELS"/>
-        <org.eventb.core.prIdent name="modelParameters" org.eventb.core.type="ℙ(ARTIFACTS×ℙ(PARAMETERS))"/>
-        <org.eventb.core.prIdent name="modelScores" org.eventb.core.type="ℙ(ARTIFACTS×ℤ)"/>
         <org.eventb.core.prIdent name="releases" org.eventb.core.type="ℙ(ARTIFACTS×DEPLOYMENT_STATUSES)"/>
         <org.eventb.core.prIdent name="testResults" org.eventb.core.type="ℙ(ARTIFACTS×STATUSES)"/>
         <org.eventb.core.prIdent name="trainingDatasets" org.eventb.core.type="ℙ(ARTIFACTS×ℙ(DATA_SUBJECTS×DATA))"/>
-        <org.eventb.core.prPred name="p50" org.eventb.core.predicate="DEPLOYMENT_STATUSES={Void,Deployed}"/>
-        <org.eventb.core.prPred name="p51" org.eventb.core.predicate="¬Void=Deployed"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(DATA_SUBJECTS,{DataSubject1},{DataSubject2},{DataSubject3})"/>
-        <org.eventb.core.prPred name="p64" org.eventb.core.predicate="artifacts∈ℙ(ARTIFACTS × MODELS)">
+        <org.eventb.core.prPred name="p31" org.eventb.core.predicate="DEPLOYMENT_STATUSES={Void,Deployed}"/>
+        <org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬Void=Deployed"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(DATA_SUBJECTS,{DataSubject1},{DataSubject2},{DataSubject3})"/>
+        <org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬dataSubjects=(∅ ⦂ ℙ(DATA_SUBJECTS))"/>
+        <org.eventb.core.prPred name="p41" org.eventb.core.predicate="artifacts∈ℙ(ARTIFACTS × MODELS)">
             <org.eventb.core.prIdent name="artifacts" org.eventb.core.type="ℙ(ARTIFACTS×MODELS)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p66" org.eventb.core.predicate="∀x⦂DATA_SUBJECTS·x∈dom(trainingDatasets(artifact))∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents(model ↦ x)=Given"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="dataSubjectConsents∈MODELS × DATA_SUBJECTS ⇸ CONSENT_STATUSES"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="consents∈MODELS ⇸ consentDetails"/>
-        <org.eventb.core.prPred name="p59" org.eventb.core.predicate="artifact∈dom(testResults)"/>
-        <org.eventb.core.prPred name="p36" org.eventb.core.predicate="CONSENTS={ConsentA,ConsentB}"/>
-        <org.eventb.core.prPred name="p61" org.eventb.core.predicate="¬artifact ↦ Deployed∈releases"/>
-        <org.eventb.core.prPred name="p48" org.eventb.core.predicate="STATUSES={Passed,Failed}"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="dataSubjects=dom(trainingDatasets(artifact))∧dataSubjects≠(∅ ⦂ ℙ(DATA_SUBJECTS))∧(∀x⦂DATA_SUBJECTS·x∈dataSubjects∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents(model ↦ x)=Given)"/>
-        <org.eventb.core.prPred name="p60" org.eventb.core.predicate="testResults(artifact)=Passed"/>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="(∅ ⦂ ℙ(MODELS×DATA_SUBJECTS×CONSENT_STATUSES))∈MODELS × DATA_SUBJECTS ⇸ CONSENT_STATUSES"/>
-        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="artifact ↦ Deployed∉releases"/>
-        <org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬DataSubject1=DataSubject2"/>
-        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="(∅ ⦂ ℙ(MODELS×CONSENTS))∈MODELS ⤔ CONSENTS"/>
-        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="partition(DATA,{Video},{Audio},{Name})"/>
-        <org.eventb.core.prPred name="p32" org.eventb.core.predicate="DATA_SUBJECTS={DataSubject1,DataSubject2,DataSubject3}"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="releases{artifact ↦ Deployed}∈ARTIFACTS ⇸ DEPLOYMENT_STATUSES"/>
-        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="releases∈ARTIFACTS ⇸ DEPLOYMENT_STATUSES"/>
-        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="artifact∈dom(testResults)∧testResults(artifact)=Passed"/>
-        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="partition(CONSENTS,{ConsentA},{ConsentB})"/>
-        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="model∈dom(consents)∧artifact∈dom(trainingDatasets)"/>
-        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="baselineScores∈MODELS ⇸ ℕ1"/>
-        <org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬Given=Withdrawn"/>
-        <org.eventb.core.prPred name="p40" org.eventb.core.predicate="CONSENT_STATUSES={Given,Withdrawn,Expired}"/>
-        <org.eventb.core.prPred name="p31" org.eventb.core.predicate="consentDetails∈CONSENTS ⇸ ℕ1"/>
-        <org.eventb.core.prPred name="p45" org.eventb.core.predicate="¬Video=Audio"/>
-        <org.eventb.core.prPred name="p57" org.eventb.core.predicate="¬dataSubjects=(∅ ⦂ ℙ(DATA_SUBJECTS))"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×MODELS))∈ARTIFACTS ⇸ MODELS"/>
-        <org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬ConsentA=ConsentB"/>
-        <org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬Model1=Model2"/>
-        <org.eventb.core.prPred name="p63" org.eventb.core.predicate="requiredData∈ℙ(MODELS × DATA)">
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬ConsentA=ConsentB"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="artifact ↦ Passed∈testResults"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬Model1=Model2"/>
+        <org.eventb.core.prPred name="p40" org.eventb.core.predicate="requiredData∈ℙ(MODELS × DATA)">
             <org.eventb.core.prIdent name="requiredData" org.eventb.core.type="ℙ(MODELS×DATA)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="modelScores∈ARTIFACTS ⇸ ℕ1"/>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×STATUSES))∈ARTIFACTS ⇸ STATUSES"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="datasets∈MODELS ⇸ ℙ(DATA_SUBJECTS × DATA)"/>
-        <org.eventb.core.prPred name="p46" org.eventb.core.predicate="¬Video=Name"/>
-        <org.eventb.core.prPred name="p47" org.eventb.core.predicate="¬Audio=Name"/>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="partition(MODELS,{Model1},{Model2})"/>
-        <org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬DataSubject2=DataSubject3"/>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="modelParameters∈ARTIFACTS ⇸ ℙ(PARAMETERS)"/>
-        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="artifact∈dom(testResults)⇒⊤"/>
-        <org.eventb.core.prPred name="p65" org.eventb.core.predicate="¬dom(trainingDatasets(artifact))=(∅ ⦂ ℙ(DATA_SUBJECTS))"/>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="partition(DEPLOYMENT_STATUSES,{Void},{Deployed})"/>
-        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="trainingDatasets∈ARTIFACTS ⇸ ℙ(DATA_SUBJECTS × DATA)"/>
-        <org.eventb.core.prPred name="p56" org.eventb.core.predicate="dataSubjects=dom(trainingDatasets(artifact))"/>
-        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×ℙ(DATA_SUBJECTS×DATA)))∈ARTIFACTS ⇸ ℙ(DATA_SUBJECTS × DATA)"/>
-        <org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬Withdrawn=Expired"/>
-        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="(∅ ⦂ ℙ(MODELS×ℙ(DATA_SUBJECTS×DATA)))∈MODELS ⇸ ℙ(DATA_SUBJECTS × DATA)"/>
-        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(STATUSES,{Passed},{Failed})"/>
-        <org.eventb.core.prPred name="p49" org.eventb.core.predicate="¬Passed=Failed"/>
-        <org.eventb.core.prPred name="p58" org.eventb.core.predicate="∀x⦂DATA_SUBJECTS·x∈dataSubjects∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents(model ↦ x)=Given"/>
-        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="{Model1 ↦ 1,Model2 ↦ 1}∈MODELS ⇸ ℕ1"/>
-        <org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬Given=Expired"/>
-        <org.eventb.core.prPred name="p62" org.eventb.core.predicate="dataSources∈ℙ(DATA_SUBJECTS × DATA)">
+        <org.eventb.core.prPred name="p43" org.eventb.core.predicate="∀x⦂DATA_SUBJECTS·x∈dom(trainingDatasets(artifact))∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents(model ↦ x)=Given"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="CONSENTS={ConsentA,ConsentB}"/>
+        <org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬artifact ↦ Deployed∈releases"/>
+        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="¬Video=Name"/>
+        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬Audio=Name"/>
+        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="STATUSES={Passed,Failed}"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="dataSubjects=dom(trainingDatasets(artifact))∧dataSubjects≠(∅ ⦂ ℙ(DATA_SUBJECTS))∧(∀x⦂DATA_SUBJECTS·x∈dataSubjects∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents(model ↦ x)=Given)"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(MODELS,{Model1},{Model2})"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬DataSubject2=DataSubject3"/>
+        <org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬dom(trainingDatasets(artifact))=(∅ ⦂ ℙ(DATA_SUBJECTS))"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="partition(DEPLOYMENT_STATUSES,{Void},{Deployed})"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="artifact ↦ Deployed∉releases"/>
+        <org.eventb.core.prPred name="p35" org.eventb.core.predicate="dataSubjects=dom(trainingDatasets(artifact))"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬DataSubject1=DataSubject2"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬Withdrawn=Expired"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="partition(STATUSES,{Passed},{Failed})"/>
+        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬Passed=Failed"/>
+        <org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀x⦂DATA_SUBJECTS·x∈dataSubjects∧model ↦ x∈dom(dataSubjectConsents)⇒dataSubjectConsents(model ↦ x)=Given"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(DATA,{Video},{Audio},{Name})"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="DATA_SUBJECTS={DataSubject1,DataSubject2,DataSubject3}"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬Given=Expired"/>
+        <org.eventb.core.prPred name="p39" org.eventb.core.predicate="dataSources∈ℙ(DATA_SUBJECTS × DATA)">
             <org.eventb.core.prIdent name="dataSources" org.eventb.core.type="ℙ(DATA_SUBJECTS×DATA)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p68" org.eventb.core.predicate="STATUSES={testResults(artifact),Failed}"/>
-        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="testResults∈ARTIFACTS ⇸ STATUSES"/>
-        <org.eventb.core.prPred name="p38" org.eventb.core.predicate="MODELS={Model1,Model2}"/>
-        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="dataRetentions∈MODELS × DATA_SUBJECTS ⇸ ℕ1"/>
-        <org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬DataSubject1=DataSubject3"/>
-        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="(∅ ⦂ ℙ(ARTIFACTS×ℤ))∈ARTIFACTS ⇸ ℕ1"/>
-        <org.eventb.core.prPred name="p44" org.eventb.core.predicate="DATA={Video,Audio,Name}"/>
-        <org.eventb.core.prPred name="p67" org.eventb.core.predicate="¬trainingDatasets(artifact)=(∅ ⦂ ℙ(DATA_SUBJECTS×DATA))"/>
-        <org.eventb.core.prPred name="p52" org.eventb.core.predicate="artifact∈dom(testResults)⇒testResults∈ARTIFACTS ⇸ STATUSES"/>
-        <org.eventb.core.prPred name="p69" org.eventb.core.predicate="¬testResults(artifact)=Failed"/>
-        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="evaluateResults∈ARTIFACTS ⇸ STATUSES"/>
-        <org.eventb.core.prPred name="p55" org.eventb.core.predicate="artifact∈dom(trainingDatasets)"/>
-        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="partition(CONSENT_STATUSES,{Given},{Withdrawn},{Expired})"/>
-        <org.eventb.core.prPred name="p54" org.eventb.core.predicate="model∈dom(consents)"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.heL1:1"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="releases{artifact ↦ Deployed}∈ARTIFACTS ⇸ DEPLOYMENT_STATUSES"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="releases∈ARTIFACTS ⇸ DEPLOYMENT_STATUSES"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="MODELS={Model1,Model2}"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬DataSubject1=DataSubject3"/>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="DATA={Video,Audio,Name}"/>
+        <org.eventb.core.prPred name="p44" org.eventb.core.predicate="¬trainingDatasets(artifact)=(∅ ⦂ ℙ(DATA_SUBJECTS×DATA))"/>
+        <org.eventb.core.prPred name="p34" org.eventb.core.predicate="artifact∈dom(trainingDatasets)"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(CONSENT_STATUSES,{Given},{Withdrawn},{Expired})"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="partition(CONSENTS,{ConsentA},{ConsentB})"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="model∈dom(consents)∧artifact∈dom(trainingDatasets)"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬Given=Withdrawn"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="CONSENT_STATUSES={Given,Withdrawn,Expired}"/>
+        <org.eventb.core.prPred name="p33" org.eventb.core.predicate="model∈dom(consents)"/>
+        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬Video=Audio"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eqL1:1"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eqL1:1"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r6" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="MonitorConsentViolation/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30" org.eventb.core.prSets="ARTIFACTS,CONSENTS,CONSENT_STATUSES,DATA,DATA_SUBJECTS,DEPLOYMENT_STATUSES,MODELS,PARAMETERS,STATUSES">
         <org.eventb.core.lang name="L"/>

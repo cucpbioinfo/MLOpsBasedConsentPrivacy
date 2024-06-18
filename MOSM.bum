@@ -112,7 +112,7 @@
         <org.eventb.core.parameter name=")" org.eventb.core.identifier="artifact"/>
         <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="model ∈ dom(consents) ∧&#10;artifact ∈ dom(trainingDatasets)"/>
         <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="dataSubjects = dom(trainingDatasets(artifact)) ∧&#10;dataSubjects ≠ ∅ ∧&#10;(∀x·x ∈ dataSubjects ∧&#10;model ↦ x ∈ dom(dataSubjectConsents) ⇒&#10;dataSubjectConsents(model ↦ x) = Given)"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="artifact ∈ dom(testResults) ∧ testResults(artifact) = Passed"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="artifact ↦ Passed ∈ testResults"/>
         <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="artifact ↦ Deployed ∉ releases"/>
         <org.eventb.core.action name="/" org.eventb.core.assignment="releases(artifact) ≔ Deployed" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
